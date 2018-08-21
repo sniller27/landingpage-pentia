@@ -1,0 +1,166 @@
+@import "variables.scss";
+
+body {
+	background: $primary-color;
+	font-family: sans-serif;
+}
+
+::-webkit-scrollbar {
+	background-color: $medium-color;
+	width: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+	background-color: $accent-color;
+}
+
+p {
+	line-height: 1.5em;	
+}
+
+h2 {
+	font-size: 2em;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+nav {
+	width: 55px;
+    height: 100%;
+    position: fixed;
+    background-color: $secondary-color;
+
+    .logo {
+    	height: 30px;
+    	width: 31px;
+    	margin: 10px;
+    	fill: $bright-color;
+    }
+}
+
+#content {
+
+	padding-left: 55px;
+
+	.slide {
+		height: 100vh;
+		padding: 55px;
+		box-sizing: border-box;
+
+		.slide-header {
+			font-weight: 600;
+		}
+
+		.slide-content {
+			
+			text-align: center;
+			width: 600px;
+			margin: auto;
+
+			.zeppelin {
+				/*background: url(../../../assets/zeppeliner.svg);*/
+				mask: url(../../../assets/zeppeliner.svg);
+				background-color: $bright-color;
+				width: 300px;
+				height: 300px;
+				fill: green;
+				background-repeat: no-repeat;
+				margin: auto;
+			}
+
+			.slide-maintitle {
+				font-size: 3em;
+			}
+
+		}
+
+		.slide-footer {
+			text-align: center;
+		}
+	}
+
+	#digital-transformation-introslide {
+		// background-color: $primary-color;
+		color: $bright-color;
+
+		.slide {
+			flex: 1 0 auto;
+		}
+	}
+
+	#digital-transformation-initiatives {
+		background-color: $bright-color;
+		color: $dark-color;
+
+		.initiatives {
+
+			/*background-color: blue;*/
+			display: flex;
+			justify-content: space-between;
+			/*flex-direction: column;*/
+			/*flex-wrap: wrap;*/
+			/*align-items: flex-start;*/
+
+			.consulting, .execution {
+				/*flex: 1;*/
+				width: 35%;
+
+				h3 {
+					margin-bottom: 20px;
+				}
+			}
+
+		}
+	}
+
+	#digital-transformation-contactform {
+		background-color: $accent-color;
+		color: $bright-color;
+
+		.contactform {
+			text-align: center;
+			width: 500px;
+			margin: auto;
+			margin-bottom: 50px;
+
+			/*background-color: green;*/
+
+			#user-data input[type="text"] {
+				border-style: solid;
+				border: 0px;
+				border-bottom: 1px solid $bright-color;
+				background-color: unset;
+			}
+
+			button {
+				display: block;
+				margin: auto;
+				background-color: $bright-color;
+				padding: 20px 40px;
+				border-radius: 5px;
+				border: unset;
+				color: $accent-color;
+				font-weight: 600;
+				margin-top: 50px;
+			}
+		}
+	}
+
+	.prize-box {
+		
+		margin-top: 50px;
+
+		.prize {
+			background-image: url(../../../assets/prize.svg);
+			background-repeat: no-repeat;
+			display: inline-block;
+			margin: auto;
+			width: 58px;
+			height: 58px;
+		}
+	}
+}

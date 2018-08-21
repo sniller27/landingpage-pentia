@@ -1,0 +1,26 @@
+{
+  "name": "landingpage-pentia",
+  "version": "1.0.0",
+  "description": "Jobtest for a landingpage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sniller27/landingpage-pentia.git"
+  },
+  "author": "Jonas Jakobsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sniller27/landingpage-pentia/issues"
+  },
+  "homepage": "https://github.com/sniller27/landingpage-pentia#readme",
+  "dependencies": {
+    "browser-sync": "^2.24.6",
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1"
+  }
+}

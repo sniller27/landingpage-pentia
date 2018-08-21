@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Digital transformation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="src/styles/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="src/styles/css/mobile.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<nav>
+		<img src="assets/logo.svg" alt="Pentia A/S" class="logo">
+	</nav>
+	<div id="content">
+		
+		<div class="slide" id="digital-transformation-introslide">
+
+			<p class="slide-header">Lorem ipsum</p>
+
+			<div class="slide-content">
+				<div class="zeppelin"></div>
+				<h1 class="slide-maintitle">Digital transformation</h1>
+				<h3>Rådgivning. Implementering. Resultater</h3>
+				<p>
+				Hvordan bliver din virksomhed en digital vinder i fremtiden?
+				Hvilke tiltag skal der til strategisk og taktisk for at dreje forretningen i den
+				rigtige retning? Hvilke elementer indeholder en succesfuld digital
+				transformation? Vi har svarene. Pentia kan hjælpe dig på hele rejsen fra
+				strategisk rådgivning til implementering.
+				</p>
+			</div>
+
+			<div class="slide-footer">
+				<a href="#">Start din rejse her</a>
+			</div>
+
+		</div>
+
+		<div class="slide" id="digital-transformation-initiatives">
+
+			<div class="slide-content">
+
+				<h2>Vi kan hjælpe dig med digital transformation på to fronter</h2>
+
+				<div class="initiatives">
+
+					<div class="consulting">
+						<img src="assets/illustration1.svg" alt="">
+
+						<h3>Strategisk rådgivning om digital transformation</h3>
+
+						<p>
+						Udnytter din virksomhed sit digital potentiale?
+						Hvilke forretningsmuligheder er der, og hvad betyder det på et strategisk plan?
+						</p>
+
+					</div>
+					
+					<div class="execution">
+
+						<img src="assets/illustration2.svg" alt="">
+
+						<h3>Eksekvering af digital transformation</h3>
+
+						<p>
+						I ved, hvad I vil, men I har brug for
+						hjælp til at rulle strategien ud i 
+						forhold til organisationen og det 
+						digitale fundament bl.a. på Sitecore.
+						Det handler om mennesker og
+						resultater.
+						</p>
+
+					</div>
+
+				</div>
+			
+			</div>
+			
+		</div>
+
+		<div class="slide" id="digital-transformation-contactform">
+			
+			<div class="contactform">
+				
+				<h2>Få 10 gode råd om digital transformation</h2>
+				<p>Ja tak, jeg vil gerne høre mere digital transformation</p>
+
+				<form action="" id="user-data">
+					<input type="text" id="name" name="name" placeholder="Navn">
+					<input type="text" id="phone" name="phone" placeholder="Mobil">
+					<input type="text" id="email" name="email" placeholder="Email">
+					<input type="text" id="zipcode" name="zipcode" placeholder="Post nr.">
+					<input type="text" id="city" name="city" placeholder="By">
+
+					<button>Ring mig op</button>
+				</form>
+
+				<div class="prize-box">
+					<div class="prize"></div>
+					<p>Pentia vinder pris for digital innovation 2017</p>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+
+	/* Conversion of img SVG to inline-SVG's */
+		$(function(){
+		    jQuery('img[src*=".svg"]').each(function(){
+
+		        var $img = jQuery(this);
+		        var imgID = $img.attr('id');
+		        var imgClass = $img.attr('class');
+		        var imgURL = $img.attr('src');
+		    
+		        jQuery.get(imgURL, function(data) {
+		            // Get the SVG tag, ignore the rest
+		            var $svg = jQuery(data).find('svg');
+		    
+		            // Add replaced image's ID to the new SVG
+		            if(typeof imgID !== 'undefined') {
+		                $svg = $svg.attr('id', imgID);
+		            }
+		            // Add replaced image's classes to the new SVG
+		            if(typeof imgClass !== 'undefined') {
+		                $svg = $svg.attr('class', imgClass+' replaced-svg');
+		            }
+		    
+		            // Remove any invalid XML tags as per http://validator.w3.org
+		            $svg = $svg.removeAttr('xmlns:a');
+		            
+		            // Check if the viewport is set, else we gonna set it if we can.
+		            if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+		                $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+		            }
+		    
+		            // Replace image with new SVG
+		            $img.replaceWith($svg);
+		    
+		        }, 'xml');
+		    
+		    });
+		});
+
+
+	</script>
+</body>
+</html>
