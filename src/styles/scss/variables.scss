@@ -4,3 +4,21 @@ $bright-color: #FFFFFF;
 $medium-color: #D8D8D8;
 $dark-color: #000000;
 $accent-color: #EB5B51;
+
+
+@mixin easeOut {
+  // transition: all 0.5s ease-out;
+  transition: .5s ease-in-out;
+  transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+@mixin specialEase {
+	transition: all .5s cubic-bezier(.895,.03,.685,.22);
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    transition-delay: 0s;
+}

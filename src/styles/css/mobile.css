@@ -1,6 +1,18 @@
+@font-face {
+  font-family: gotham_blackregular;
+  src: url(../../../assets/fonts/gotham-black-webfont.woff2) format("woff2"), url(../../../assets/fonts/gotham-black-webfont.woff) format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: gotham_bookregular;
+  src: url(../../../assets/fonts/gotham-book-webfont.woff2) format("woff2"), url(../../../assets/fonts/gotham-book-webfont.woff) format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
 body {
   background: #2A2A2C;
-  font-family: sans-serif; }
+  font-family: gotham_bookregular; }
 
 ::-webkit-scrollbar {
   background-color: #D8D8D8;
@@ -12,6 +24,9 @@ body {
 p {
   line-height: 1.5em; }
 
+h1, h2 {
+  font-family: gotham_blackregular; }
+
 h2 {
   font-size: 2em; }
 
@@ -19,22 +34,125 @@ a {
   text-decoration: none;
   color: inherit; }
 
+.logo {
+  height: 30px;
+  width: 35px;
+  margin: 10px;
+  fill: #FFFFFF;
+  position: fixed;
+  z-index: 2;
+  cursor: pointer; }
+
 nav {
   width: 55px;
   height: 100%;
   position: fixed;
-  background-color: #1B1B1D; }
-  nav .logo {
-    height: 30px;
-    width: 31px;
-    margin: 10px;
-    fill: #FFFFFF; }
+  background-color: #1B1B1D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-transition: all 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: all 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  z-index: 1; }
+  nav.pane-open {
+    width: 100%;
+    -webkit-transition: all 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    transition: all 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+  nav .burger-container {
+    /*temp start*/
+    /*width: 55px;*/
+    /*right: 0px;*/
+    /*position: absolute;*/
+    /*temp end*/
+    /*flex-basis to take up full witdh and avoid collision with logo*/
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    height: 40px;
+    width: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    nav .burger-container .burger-menu {
+      width: 29px;
+      height: 19px;
+      position: relative;
+      -webkit-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-timing-function: ease-in-out;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s; }
+      nav .burger-container .burger-menu div {
+        background-color: #FFFFFF;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        /*display: block;*/
+        /*margin: 0 0 5px 0;*/
+        -webkit-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s; }
+        nav .burger-container .burger-menu div:nth-child(1) {
+          top: 0px; }
+        nav .burger-container .burger-menu div:nth-child(2), nav .burger-container .burger-menu div:nth-child(3) {
+          top: 9px; }
+        nav .burger-container .burger-menu div:nth-child(4) {
+          top: 18px; }
+      nav .burger-container .burger-menu.menu-open {
+        /*transform: rotate(90deg);*/ }
+        nav .burger-container .burger-menu.menu-open div:nth-child(2) {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+        nav .burger-container .burger-menu.menu-open div:nth-child(3) {
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
+        nav .burger-container .burger-menu.menu-open div:nth-child(1), nav .burger-container .burger-menu.menu-open div:nth-child(4) {
+          width: 0;
+          left: 50%; }
 
 #content {
   padding-left: 55px; }
   #content .slide {
     height: 100vh;
-    padding: 55px;
+    padding: 35px 55px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
     #content .slide .slide-header {
@@ -57,12 +175,19 @@ nav {
         font-size: 3em; }
     #content .slide .slide-footer {
       text-align: center; }
+      #content .slide .slide-footer a {
+        font-weight: 600; }
   #content #digital-transformation-introslide {
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
     #content #digital-transformation-introslide .slide {
-      -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-      flex: 1 0 auto; }
+      /*flex: 1 0 auto;*/ }
   #content #digital-transformation-initiatives {
     background-color: #FFFFFF;
     color: #000000; }
@@ -95,7 +220,8 @@ nav {
         border-style: solid;
         border: 0px;
         border-bottom: 1px solid #FFFFFF;
-        background-color: unset; }
+        background-color: unset;
+        color: #F29892; }
       #content #digital-transformation-contactform .contactform button {
         display: block;
         margin: auto;
@@ -105,11 +231,14 @@ nav {
         border: unset;
         color: #EB5B51;
         font-weight: 600;
-        margin-top: 50px; }
+        margin-top: 50px;
+        cursor: pointer; }
   #content .prize-box {
     margin-top: 50px; }
     #content .prize-box .prize {
       background-image: url(../../../assets/prize.svg);
+      /*mask: url(../../../assets/prize.svg);*/
+      /*background-color: black;*/
       background-repeat: no-repeat;
       display: inline-block;
       margin: auto;

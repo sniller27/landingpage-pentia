@@ -10,9 +10,24 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
+	
+	<img src="assets/logo.svg" alt="Pentia A/S" class="logo">
+
 	<nav>
-		<img src="assets/logo.svg" alt="Pentia A/S" class="logo">
+
+		<!-- <div class="left-menu"> -->
+			<div class="burger-container">
+				<div class="burger-menu">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		<!-- </div> -->
+
 	</nav>
+
 	<div id="content">
 		
 		<div class="slide" id="digital-transformation-introslide">
@@ -91,8 +106,8 @@
 				<form action="" id="user-data">
 					<input type="text" id="name" name="name" placeholder="Navn">
 					<input type="text" id="phone" name="phone" placeholder="Mobil">
-					<input type="text" id="email" name="email" placeholder="Email">
-					<input type="text" id="zipcode" name="zipcode" placeholder="Post nr.">
+					<input type="text" id="email" name="email" placeholder="e-mail">
+					<input type="text" id="zipcode" name="zipcode" placeholder="Postnr.">
 					<input type="text" id="city" name="city" placeholder="By">
 
 					<button>Ring mig op</button>
@@ -150,6 +165,43 @@
 		});
 
 
+	</script>
+
+	<script type="text/javascript">
+		// Select DOM Items
+		const navbar = document.querySelector('nav');
+		const burgerMenu = document.querySelector('.burger-menu');
+
+		// Set Initial State Of Menu
+		let showMenu = false;
+
+		navbar.addEventListener('click', toggleMenu);
+
+		function toggleMenu() {
+		  if (!showMenu) {
+		    burgerMenu.classList.add('menu-open');
+		    navbar.classList.add('pane-open');
+		    // menu.classList.add('show');
+		    // menuNav.classList.add('show');
+		    // menuBranding.classList.add('show');
+		    // navItems.forEach(item => item.classList.add('show'));
+
+		    // Set Menu State
+		    showMenu = true;
+		  } else {
+		    burgerMenu.classList.remove('menu-open');
+		    navbar.classList.remove('pane-open');
+		    // menu.classList.remove('show');
+		    // menuNav.classList.remove('show');
+		    // menuBranding.classList.remove('show');
+		    // navItems.forEach(item => item.classList.remove('show'));
+
+		    // Set Menu State
+		    showMenu = false;
+		  }
+			
+		  console.log(showMenu);
+		}
 	</script>
 </body>
 </html>
