@@ -48,12 +48,7 @@ nav {
   height: 100%;
   position: fixed;
   background-color: #1B1B1D;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  height: 100%;
   cursor: pointer;
   -webkit-transition: all 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
   transition: all 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
@@ -65,8 +60,133 @@ nav {
   transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-  z-index: 1; }
-  nav.pane-open {
+  z-index: 1;
+  left: 0;
+  top: 0; }
+  nav .button-pane {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 55px; }
+    nav .button-pane .burger-container {
+      /*temp start*/
+      /*width: 55px;*/
+      /*right: 0px;*/
+      /*position: absolute;*/
+      /*temp end*/
+      /*flex-basis to take up full witdh and avoid collision with logo*/
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      height: 40px;
+      width: 40px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      nav .button-pane .burger-container .burger-menu {
+        width: 29px;
+        height: 19px;
+        position: relative;
+        -webkit-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s; }
+        nav .button-pane .burger-container .burger-menu div {
+          background-color: #FFFFFF;
+          width: 100%;
+          height: 1px;
+          position: absolute;
+          left: 0;
+          /*display: block;*/
+          /*margin: 0 0 5px 0;*/
+          -webkit-transition: .5s ease-in-out;
+          transition: .5s ease-in-out;
+          -webkit-transition-property: all;
+          transition-property: all;
+          -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+          -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+          -webkit-transition-delay: 0s;
+          transition-delay: 0s; }
+          nav .button-pane .burger-container .burger-menu div:nth-child(1) {
+            top: 0px; }
+          nav .button-pane .burger-container .burger-menu div:nth-child(2), nav .button-pane .burger-container .burger-menu div:nth-child(3) {
+            top: 9px; }
+          nav .button-pane .burger-container .burger-menu div:nth-child(4) {
+            top: 18px; }
+        nav .button-pane .burger-container .burger-menu.menu-open {
+          /*transform: rotate(90deg);*/ }
+          nav .button-pane .burger-container .burger-menu.menu-open div:nth-child(2) {
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+          nav .button-pane .burger-container .burger-menu.menu-open div:nth-child(3) {
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+          nav .button-pane .burger-container .burger-menu.menu-open div:nth-child(1), nav .button-pane .burger-container .burger-menu.menu-open div:nth-child(4) {
+            width: 0;
+            left: 50%; }
+  nav .left-menu {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .5s linear;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+    nav .left-menu.menu-open {
+      width: 100%;
+      opacity: 1;
+      -webkit-transition-delay: .5s;
+      transition-delay: .5s; }
+    nav .left-menu ul li {
+      font-size: 1.5rem;
+      font-family: gotham_blackregular;
+      font-weight: 100;
+      line-height: 2.5rem;
+      color: #FFFFFF; }
+  nav.menu-open {
     width: 100%;
     -webkit-transition: all 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
     transition: all 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
@@ -78,75 +198,6 @@ nav {
     transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
     -webkit-transition-delay: 0s;
     transition-delay: 0s; }
-  nav .burger-container {
-    /*temp start*/
-    /*width: 55px;*/
-    /*right: 0px;*/
-    /*position: absolute;*/
-    /*temp end*/
-    /*flex-basis to take up full witdh and avoid collision with logo*/
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    height: 40px;
-    width: 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
-    nav .burger-container .burger-menu {
-      width: 29px;
-      height: 19px;
-      position: relative;
-      -webkit-transition: .5s ease-in-out;
-      transition: .5s ease-in-out;
-      -webkit-transition-property: all;
-      transition-property: all;
-      -webkit-transition-duration: 0.5s;
-      transition-duration: 0.5s;
-      -webkit-transition-timing-function: ease-in-out;
-      transition-timing-function: ease-in-out;
-      -webkit-transition-delay: 0s;
-      transition-delay: 0s; }
-      nav .burger-container .burger-menu div {
-        background-color: #FFFFFF;
-        width: 100%;
-        height: 1px;
-        position: absolute;
-        left: 0;
-        /*display: block;*/
-        /*margin: 0 0 5px 0;*/
-        -webkit-transition: .5s ease-in-out;
-        transition: .5s ease-in-out;
-        -webkit-transition-property: all;
-        transition-property: all;
-        -webkit-transition-duration: 0.5s;
-        transition-duration: 0.5s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-timing-function: ease-in-out;
-        -webkit-transition-delay: 0s;
-        transition-delay: 0s; }
-        nav .burger-container .burger-menu div:nth-child(1) {
-          top: 0px; }
-        nav .burger-container .burger-menu div:nth-child(2), nav .burger-container .burger-menu div:nth-child(3) {
-          top: 9px; }
-        nav .burger-container .burger-menu div:nth-child(4) {
-          top: 18px; }
-      nav .burger-container .burger-menu.menu-open {
-        /*transform: rotate(90deg);*/ }
-        nav .burger-container .burger-menu.menu-open div:nth-child(2) {
-          -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg); }
-        nav .burger-container .burger-menu.menu-open div:nth-child(3) {
-          -webkit-transform: rotate(45deg);
-          transform: rotate(45deg); }
-        nav .burger-container .burger-menu.menu-open div:nth-child(1), nav .burger-container .burger-menu.menu-open div:nth-child(4) {
-          width: 0;
-          left: 50%; }
 
 #content {
   padding-left: 55px; }

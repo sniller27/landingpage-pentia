@@ -58,93 +58,149 @@ a {
 
 
 nav {
+	
 	width: 55px;
     height: 100%;
     position: fixed;
     background-color: $secondary-color;
-    display: flex;
-    align-items: center;
+    height: 100%;
     cursor: pointer;
     @include specialEase;
     z-index: 1;
+	left: 0; 
+	top: 0; 
 
-    &.pane-open {
+    .button-pane {
+
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    width: 55px;
+
+    	.burger-container {
+
+			/*temp start*/
+			    /*width: 55px;*/
+	    /*right: 0px;*/
+	    /*position: absolute;*/
+	    /*temp end*/
+
+
+
+	    	/*flex-basis to take up full witdh and avoid collision with logo*/
+	    	flex-basis: 100%;
+	    	height: 40px;
+	    	width: 40px;
+	    	display: flex;
+		    align-items: center;
+		    justify-content: center;
+
+	    	.burger-menu {
+			    
+			    width: 29px;
+			    height: 19px;
+			    position: relative;
+			    @include easeOut;
+
+	    		div {
+		    		background-color: $bright-color;
+		    		width: 100%;
+	    			height: 1px;
+	    			position: absolute;
+					left: 0;
+		    		/*display: block;*/
+		    		/*margin: 0 0 5px 0;*/
+			    	@include easeOut;
+
+					&:nth-child(1) {
+						top: 0px;
+					}
+
+					&:nth-child(2), &:nth-child(3) {
+						top: 9px;
+					}
+
+					&:nth-child(4) {
+						top: 18px;
+					}
+		    	}
+
+		    	&.menu-open {
+					/*transform: rotate(90deg);*/
+
+				      div {
+
+					      &:nth-child(2) {
+					        transform: rotate(-45deg);
+					      }
+
+					      &:nth-child(3) {
+							transform: rotate(45deg);
+					      }
+
+					      &:nth-child(1), &:nth-child(4) {
+					        width: 0;
+					        left: 50%;
+					      }
+
+				      }
+		    	}
+
+	    	}
+	    	
+	    }
+    }
+
+    .left-menu {
+	
+		display: -ms-flexbox;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    transition: all .5s linear;
+	    opacity: 0;
+	    overflow: hidden;
+
+
+	    transition: all .5s linear;
+	    transition-property: all;
+	    transition-duration: 0.5s;
+	    transition-timing-function: linear;
+	    transition-delay: 0s;
+
+	    &.menu-open {
+	    	width: 100%;
+    		opacity: 1;
+    		transition-delay: .5s;
+	    }
+
+	    ul {
+	    	li {
+				font-size: 1.5rem;
+				font-family: gotham_blackregular;
+				font-weight: 100;
+				line-height: 2.5rem;
+				color: $bright-color;
+	    	}
+	    }
+	    
+    }
+
+    &.menu-open {
     	width: 100%;
     	@include specialEase;
     }
 
-    .burger-container {
-
-		/*temp start*/
-		    /*width: 55px;*/
-    /*right: 0px;*/
-    /*position: absolute;*/
-    /*temp end*/
-
-
-
-    	/*flex-basis to take up full witdh and avoid collision with logo*/
-    	flex-basis: 100%;
-    	height: 40px;
-    	width: 40px;
-    	display: flex;
-	    align-items: center;
-	    justify-content: center;
-
-    	.burger-menu {
-		    
-		    width: 29px;
-		    height: 19px;
-		    position: relative;
-		    @include easeOut;
-
-    		div {
-	    		background-color: $bright-color;
-	    		width: 100%;
-    			height: 1px;
-    			position: absolute;
-				left: 0;
-	    		/*display: block;*/
-	    		/*margin: 0 0 5px 0;*/
-		    	@include easeOut;
-
-				&:nth-child(1) {
-					top: 0px;
-				}
-
-				&:nth-child(2), &:nth-child(3) {
-					top: 9px;
-				}
-
-				&:nth-child(4) {
-					top: 18px;
-				}
-	    	}
-
-	    	&.menu-open {
-				/*transform: rotate(90deg);*/
-
-			      div {
-
-
-				      &:nth-child(2) {
-				        transform: rotate(-45deg);
-				      }
-
-				      &:nth-child(3) {
-						transform: rotate(45deg);
-				      }
-
-				      &:nth-child(1), &:nth-child(4) {
-				        width: 0;
-				        left: 50%;
-				      }
-			      }
-	    	}
-
-    	}
-    	
-    }
+    
 }
 
 #content {

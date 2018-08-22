@@ -15,7 +15,7 @@
 
 	<nav>
 
-		<!-- <div class="left-menu"> -->
+		<div class="button-pane">
 			<div class="burger-container">
 				<div class="burger-menu">
 					<div></div>
@@ -24,7 +24,44 @@
 					<div></div>
 				</div>
 			</div>
-		<!-- </div> -->
+		</div>
+
+		<div class="left-menu">
+			
+			<ul>
+				<li>
+					<a href="#">Hvorfor Pentia</a>
+				</li>
+				<li>
+					<a href="#">Approach</a>
+				</li>
+				<li>
+					<a href="#">Services</a>
+				</li>
+				<li>
+					<a href="#">Kunder</a>
+				</li>
+				<li>
+					<a href="#">Cases</a>
+				</li>
+				<li>
+					<a href="#">Events</a>
+				</li>
+				<li>
+					<a href="#">Nyheder</a>
+				</li>
+				<li>
+					<a href="#">Jobs</a>
+				</li>
+				<li>
+					<a href="#">Om Pentia</a>
+				</li>
+				<li>
+					<a href="#">Kontakt</a>
+				</li>
+			</ul>
+
+		</div>
 
 	</nav>
 
@@ -171,6 +208,7 @@
 		// Select DOM Items
 		const navbar = document.querySelector('nav');
 		const burgerMenu = document.querySelector('.burger-menu');
+		const leftMenu = document.querySelector('.left-menu');
 
 		// Set Initial State Of Menu
 		let showMenu = false;
@@ -180,7 +218,8 @@
 		function toggleMenu() {
 		  if (!showMenu) {
 		    burgerMenu.classList.add('menu-open');
-		    navbar.classList.add('pane-open');
+		    navbar.classList.add('menu-open');
+		    leftMenu.classList.add('menu-open');
 		    // menu.classList.add('show');
 		    // menuNav.classList.add('show');
 		    // menuBranding.classList.add('show');
@@ -190,7 +229,8 @@
 		    showMenu = true;
 		  } else {
 		    burgerMenu.classList.remove('menu-open');
-		    navbar.classList.remove('pane-open');
+		    navbar.classList.remove('menu-open');
+		    leftMenu.classList.remove('menu-open');
 		    // menu.classList.remove('show');
 		    // menuNav.classList.remove('show');
 		    // menuBranding.classList.remove('show');
@@ -200,7 +240,6 @@
 		    showMenu = false;
 		  }
 			
-		  console.log(showMenu);
 		}
 	</script>
 </body>
