@@ -1,0 +1,37 @@
+/**
+ * COLORS
+ */
+/**
+ * BREAK POINTS FOR MEDIA QUERIES
+ */
+/**
+ * MIXINS
+ */
+/*
+	TABLET
+ */
+@media screen and (min-width: 535px) {
+  #content #digital-transformation-initiatives .initiatives {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+  #content #digital-transformation-initiatives .initiatives .consulting, #content #digital-transformation-initiatives .initiatives .execution {
+    width: 35%; }
+  #content .slide .slide-content .slide-maintitle {
+    font-size: 3em; }
+  #content .slide {
+    padding: 35px 55px; }
+  #content #digital-transformation-contactform .contactform #user-data #phone, #content #digital-transformation-contactform .contactform #user-data #zipcode {
+    float: left; }
+  #content #digital-transformation-contactform .contactform #user-data #email, #content #digital-transformation-contactform .contactform #user-data #city {
+    float: right; }
+  h2 {
+    /*font-size: 7vw;*/
+    font-size: 2em; }
+  #content #digital-transformation-contactform .contactform #user-data {
+    margin-top: 100px; }
+  #content #digital-transformation-contactform .contactform #user-data #phone, #content #digital-transformation-contactform .contactform #user-data #email, #content #digital-transformation-contactform .contactform #user-data #zipcode, #content #digital-transformation-contactform .contactform #user-data #city {
+    width: 48%; }
+  #digital-transformation-contactform .contactform h2 {
+    margin-top: 50px; } }

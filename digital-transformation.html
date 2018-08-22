@@ -12,6 +12,7 @@
 
 	<link rel="stylesheet" type="text/css" href="src/styles/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="src/styles/css/mobile.css">
+	<link rel="stylesheet" type="text/css" href="src/styles/css/tablet.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
@@ -79,7 +80,7 @@
 			<div class="slide-content">
 				<div class="zeppelin"></div>
 				<h1 class="slide-maintitle">Digital transformation</h1>
-				<h3>Rådgivning. Implementering. Resultater</h3>
+				<h3 class="slide-subtitle">Rådgivning. Implementering. Resultater</h3>
 				<p>
 				Hvordan bliver din virksomhed en digital vinder i fremtiden?
 				Hvilke tiltag skal der til strategisk og taktisk for at dreje forretningen i den
@@ -146,11 +147,14 @@
 				<p>Ja tak, jeg vil gerne høre mere digital transformation</p>
 
 				<form action="" id="user-data">
-					<input type="text" id="name" name="name" placeholder="Navn">
-					<input type="text" id="phone" name="phone" placeholder="Mobil">
-					<input type="email" id="email" name="email" placeholder="e-mail">
-					<input type="text" id="zipcode" name="zipcode" placeholder="Postnr.">
-					<input type="text" id="city" name="city" placeholder="By">
+
+					<div class="input-box">
+						<input type="text" id="name" name="name" placeholder="Navn">
+						<input type="text" id="phone" name="phone" placeholder="Mobil">
+						<input type="email" id="email" name="email" placeholder="e-mail">
+						<input type="text" id="zipcode" name="zipcode" placeholder="Postnr.">
+						<input type="text" id="city" name="city" placeholder="By">
+					</div>
 
 					<button>Ring mig op</button>
 				</form>
