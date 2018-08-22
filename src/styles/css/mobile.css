@@ -267,12 +267,38 @@ nav {
       margin: auto;
       margin-bottom: 50px;
       /*background-color: green;*/ }
-      #content #digital-transformation-contactform .contactform #user-data input[type="text"] {
-        border-style: solid;
-        border: 0px;
-        border-bottom: 1px solid #FFFFFF;
-        background-color: unset;
-        color: #F29892; }
+      #content #digital-transformation-contactform .contactform #user-data {
+        margin-top: 100px; }
+        #content #digital-transformation-contactform .contactform #user-data input[type="text"], #content #digital-transformation-contactform .contactform #user-data input[type="email"] {
+          border-style: solid;
+          border: 0px;
+          border-bottom: 1px solid #FFFFFF;
+          background-color: unset;
+          color: #F29892;
+          font-size: 1.1em;
+          padding-bottom: 8px;
+          padding-top: 8px;
+          margin-bottom: 5px;
+          margin-top: 5px;
+          width: 240px; }
+          #content #digital-transformation-contactform .contactform #user-data input[type="text"]::-webkit-input-placeholder, #content #digital-transformation-contactform .contactform #user-data input[type="email"]::-webkit-input-placeholder {
+            color: #FFFFFF; }
+          #content #digital-transformation-contactform .contactform #user-data input[type="text"]:-ms-input-placeholder, #content #digital-transformation-contactform .contactform #user-data input[type="email"]:-ms-input-placeholder {
+            color: #FFFFFF; }
+          #content #digital-transformation-contactform .contactform #user-data input[type="text"]::-ms-input-placeholder, #content #digital-transformation-contactform .contactform #user-data input[type="email"]::-ms-input-placeholder {
+            color: #FFFFFF; }
+          #content #digital-transformation-contactform .contactform #user-data input[type="text"]::placeholder, #content #digital-transformation-contactform .contactform #user-data input[type="email"]::placeholder {
+            color: #FFFFFF; }
+          #content #digital-transformation-contactform .contactform #user-data input[type="text"]:focus, #content #digital-transformation-contactform .contactform #user-data input[type="email"]:focus {
+            outline: none; }
+        #content #digital-transformation-contactform .contactform #user-data #name {
+          width: 100%; }
+        #content #digital-transformation-contactform .contactform #user-data #phone, #content #digital-transformation-contactform .contactform #user-data #email, #content #digital-transformation-contactform .contactform #user-data #zipcode, #content #digital-transformation-contactform .contactform #user-data #city {
+          /*clear: both;*/ }
+        #content #digital-transformation-contactform .contactform #user-data #phone, #content #digital-transformation-contactform .contactform #user-data #zipcode {
+          float: left; }
+        #content #digital-transformation-contactform .contactform #user-data #email, #content #digital-transformation-contactform .contactform #user-data #city {
+          float: right; }
       #content #digital-transformation-contactform .contactform button {
         display: block;
         margin: auto;

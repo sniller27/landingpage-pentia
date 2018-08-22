@@ -295,18 +295,52 @@ nav {
 			margin-bottom: 50px;
 
 			/*background-color: green;*/
+			
+			#user-data {
+				
+				margin-top: 100px;
 
-			#user-data input[type="text"] {
-				border-style: solid;
-				border: 0px;
-				border-bottom: 1px solid $bright-color;
-				background-color: unset;
-				color: #F29892;
+				input[type="text"], input[type="email"] {
+					border-style: solid;
+					border: 0px;
+					border-bottom: 1px solid $bright-color;
+					background-color: unset;
+					color: #F29892;
+					font-size: 1.1em;
+					padding-bottom: 8px;
+					padding-top: 8px;
+					margin-bottom: 5px;
+					margin-top: 5px;
+					width: 240px;
+
+					&::placeholder {
+						color: $bright-color;
+					}
+
+					&:focus {
+						outline: none;
+					}
+				}
+
+				#name {
+					width: 100%;
+				}
+
+				#phone, #email, #zipcode, #city {
+					/*clear: both;*/
+				}
+
+				#phone, #zipcode {
+					float: left;
+				}
+
+				#email, #city {
+					float: right;
+				}
+
 			}
 
-			#phone, #email, #zipcode, #city {
-
-			}
+			
 
 			button {
 				display: block;
