@@ -34,6 +34,8 @@
     font-size: 2em; }
   #content .slide {
     padding: 35px 55px; }
+    #content .slide .slide-content .zeppelin {
+      height: 300px; }
     #content .slide .slide-content .slide-subtitle {
       margin-bottom: 30px; }
     #content .slide .slide-content .slide-maintitle {

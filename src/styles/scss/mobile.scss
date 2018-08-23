@@ -200,10 +200,11 @@ nav {
 			.zeppelin {
 				/*background: url(../../../assets/zeppeliner.svg);*/
 				mask: url($assets-path + 'zeppeliner.svg') no-repeat;
+				mask-position: center;
 				background-color: $bright-color;
 				width: 100%;
 				max-width: 300px;
-				height: 300px;
+				height: 220px;
 				fill: green;
 				margin: auto;
 			}

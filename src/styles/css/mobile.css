@@ -223,10 +223,12 @@ nav {
         /*background: url(../../../assets/zeppeliner.svg);*/
         -webkit-mask: url("../../../assets/zeppeliner.svg") no-repeat;
         mask: url("../../../assets/zeppeliner.svg") no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
         background-color: #FFFFFF;
         width: 100%;
         max-width: 300px;
-        height: 300px;
+        height: 220px;
         fill: green;
         margin: auto; }
       #content .slide .slide-content .slide-maintitle {
