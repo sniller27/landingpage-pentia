@@ -1,4 +1,7 @@
 /**
+ * PATHS
+ */
+/**
  * COLORS
  */
 /**
@@ -217,8 +220,8 @@ nav {
       margin: auto; }
       #content .slide .slide-content .zeppelin {
         /*background: url(../../../assets/zeppeliner.svg);*/
-        -webkit-mask: url(../../../assets/zeppeliner.svg) no-repeat;
-        mask: url(../../../assets/zeppeliner.svg) no-repeat;
+        -webkit-mask: url("../../../assets/zeppeliner.svg") no-repeat;
+        mask: url("../../../assets/zeppeliner.svg") no-repeat;
         background-color: #FFFFFF;
         width: 100%;
         max-width: 300px;
@@ -308,12 +311,12 @@ nav {
         font-weight: 600;
         margin-top: 50px;
         cursor: pointer; }
-  #content .prize-box {
-    margin-top: 50px; }
-    #content .prize-box .prize {
-      background-image: url(../../../assets/prize.svg);
-      background-repeat: no-repeat;
-      display: inline-block;
-      margin: auto;
-      width: 58px;
-      height: 58px; }
+      #content #digital-transformation-contactform .contactform .prize-box {
+        margin-top: 50px; }
+        #content #digital-transformation-contactform .contactform .prize-box .prize {
+          background-image: url("../../../assets/prize.svg");
+          background-repeat: no-repeat;
+          display: inline-block;
+          margin: auto;
+          width: 58px;
+          height: 58px; }

@@ -44,7 +44,6 @@ a {
 	cursor: pointer;
 }
 
-
 nav {
 	
 	width: 55px;
@@ -155,6 +154,7 @@ nav {
 	    }
 
 	    ul {
+
 	    	li {
 				font-size: 1.5rem;
 				font-family: gotham_blackregular;
@@ -162,6 +162,7 @@ nav {
 				line-height: 2.5rem;
 				color: $bright-color;
 	    	}
+
 	    }
 	    
     }
@@ -197,7 +198,7 @@ nav {
 
 			.zeppelin {
 				/*background: url(../../../assets/zeppeliner.svg);*/
-				mask: url(../../../assets/zeppeliner.svg) no-repeat;
+				mask: url($assets-path + 'zeppeliner.svg') no-repeat;
 				background-color: $bright-color;
 				width: 100%;
 				max-width: 300px;
@@ -218,12 +219,14 @@ nav {
 		}
 
 		.slide-footer {
+
 			text-align: center;
 			margin-top: 20px;
 
 			a{
 				font-weight: 600;
 			}
+
 		}
 	}
 
@@ -319,20 +322,23 @@ nav {
 				margin-top: 50px;
 				cursor: pointer;
 			}
-		}
-	}
 
-	.prize-box {
+			.prize-box {
 		
-		margin-top: 50px;
+				margin-top: 50px;
 
-		.prize {
-			background-image: url(../../../assets/prize.svg);
-			background-repeat: no-repeat;
-			display: inline-block;
-			margin: auto;
-			width: 58px;
-			height: 58px;
+				.prize {
+					background-image: url($assets-path + 'prize.svg');
+					background-repeat: no-repeat;
+					display: inline-block;
+					margin: auto;
+					width: 58px;
+					height: 58px;
+				}
+			}
+
 		}
 	}
+
+	
 }
