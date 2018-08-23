@@ -64,7 +64,6 @@ nav {
   position: fixed;
   background-color: #1B1B1D;
   height: 100%;
-  cursor: pointer;
   -webkit-transition: all 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
   transition: all 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
   -webkit-transition-property: all;
@@ -92,7 +91,9 @@ nav {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 55px; }
+    width: 55px;
+    z-index: 1;
+    cursor: pointer; }
     nav .button-pane .burger-container {
       /*flex-basis to take up full width and avoid collision with logo*/
       -ms-flex-preferred-size: 100%;
@@ -238,6 +239,25 @@ nav {
       margin-top: 20px; }
       #content .slide .slide-footer a {
         font-weight: 600; }
+      #content .slide .slide-footer div {
+        width: 20px;
+        margin: auto;
+        margin-top: 15px;
+        cursor: pointer; }
+        #content .slide .slide-footer div div {
+          background-color: #FFFFFF;
+          border-radius: 50px;
+          margin: auto;
+          margin-bottom: 5px; }
+          #content .slide .slide-footer div div:nth-child(1) {
+            width: 3px;
+            height: 3px; }
+          #content .slide .slide-footer div div:nth-child(2) {
+            width: 4px;
+            height: 4px; }
+          #content .slide .slide-footer div div:nth-child(3) {
+            width: 5px;
+            height: 5px; }
   #content #digital-transformation-introslide {
     color: #FFFFFF;
     display: -webkit-box;

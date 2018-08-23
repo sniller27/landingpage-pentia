@@ -51,7 +51,6 @@ nav {
     position: fixed;
     background-color: $secondary-color;
     height: 100%;
-    cursor: pointer;
     @include specialEase;
     z-index: 1;
 	left: 0; 
@@ -67,6 +66,8 @@ nav {
 	    right: 0;
 	    bottom: 0;
 	    width: 55px;
+	    z-index: 1;
+    	cursor: pointer;
 
     	.burger-container {
 
@@ -225,6 +226,37 @@ nav {
 
 			a{
 				font-weight: 600;
+			}
+
+			div {
+			    width: 20px;
+			    margin: auto;
+			    margin-top: 15px;
+			    cursor: pointer;
+
+			    div {
+			    	background-color: $bright-color;
+			    	border-radius: 50px;
+			    	margin: auto;
+			    	margin-bottom: 5px;
+
+			    	&:nth-child(1) {
+						width: 3px;
+						height: 3px;
+					}
+
+					&:nth-child(2) {
+						width: 4px;
+						height: 4px;
+					}
+
+					&:nth-child(3) {
+						width: 5px;
+						height: 5px;
+					}
+			    }
+
+			    
 			}
 
 		}
