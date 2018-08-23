@@ -361,12 +361,22 @@ nav {
 				margin-top: 50px;
 
 				.prize {
-					background-image: url($assets-path + 'prize.svg');
+					/*background-image: url($assets-path + 'prize.svg');
 					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: center;
+*/
+					mask: url($assets-path + 'prize.svg') no-repeat;
+					mask-position: center;
+					mask-size: contain;
+					background-color: $bright-color;
+
 					display: inline-block;
 					margin: auto;
-					width: 58px;
-					height: 58px;
+					width: 50px;
+					height: 50px;
+
+					margin-bottom: 15px;
 				}
 			}
 

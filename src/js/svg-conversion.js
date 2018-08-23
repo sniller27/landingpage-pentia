@@ -1,4 +1,4 @@
-/* Conversion of img SVG to inline-SVG's */
+/* Conversion of img SVG to inline-SVG's (which enables color change) */
 $(function(){
     jQuery('img[src*=".svg"]').each(function(){
 

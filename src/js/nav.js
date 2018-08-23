@@ -7,9 +7,7 @@ const leftMenu = document.querySelector('.left-menu');
 // Set Initial State Of Menu
 let showMenu = false;
 
-buttonPane.addEventListener('click', toggleMenu);
-
-function toggleMenu(e) {
+const toggleMenu = () => {
 
   if (!showMenu) {
 
@@ -31,4 +29,6 @@ function toggleMenu(e) {
 
   }
 	
-}
+};
+
+buttonPane.addEventListener('click', toggleMenu);

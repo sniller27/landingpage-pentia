@@ -336,9 +336,20 @@ nav {
       #content #digital-transformation-contactform .contactform .prize-box {
         margin-top: 50px; }
         #content #digital-transformation-contactform .contactform .prize-box .prize {
-          background-image: url("../../../assets/prize.svg");
-          background-repeat: no-repeat;
+          /*background-image: url($assets-path + 'prize.svg');
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: center;
+*/
+          -webkit-mask: url("../../../assets/prize.svg") no-repeat;
+          mask: url("../../../assets/prize.svg") no-repeat;
+          -webkit-mask-position: center;
+          mask-position: center;
+          -webkit-mask-size: contain;
+          mask-size: contain;
+          background-color: #FFFFFF;
           display: inline-block;
           margin: auto;
-          width: 58px;
-          height: 58px; }
+          width: 50px;
+          height: 50px;
+          margin-bottom: 15px; }
