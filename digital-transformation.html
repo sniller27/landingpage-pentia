@@ -13,7 +13,10 @@
 	<link rel="stylesheet" type="text/css" href="src/styles/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="src/styles/css/mobile.css">
 	<link rel="stylesheet" type="text/css" href="src/styles/css/tablet.css">
+	<link rel="stylesheet" type="text/css" href="src/styles/css/desktop.css">
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
 </head>
 <body>
 	
@@ -105,12 +108,12 @@
 				<div class="initiatives">
 
 					<div class="consulting">
-						<img src="assets/illustration1.svg" alt="">
+						<img src="assets/progression.svg" alt="progression">
 
 						<h3>Strategisk rådgivning om digital transformation</h3>
 
 						<p>
-						Udnytter din virksomhed sit digital potentiale?
+						Udnytter din virksomhed sit digital potentiale? 
 						Hvilke forretningsmuligheder er der, og hvad betyder det på et strategisk plan?
 						</p>
 
@@ -118,7 +121,7 @@
 					
 					<div class="execution">
 
-						<img src="assets/illustration2.svg" alt="">
+						<img src="assets/graph.svg" alt="graph">
 
 						<h3>Eksekvering af digital transformation</h3>
 
@@ -170,86 +173,8 @@
 
 	</div>
 
-	<script>
+<script src="src/js/svg-conversion.js"></script>
+<script src="src/js/nav.js"></script>
 
-	/* Conversion of img SVG to inline-SVG's */
-		$(function(){
-		    jQuery('img[src*=".svg"]').each(function(){
-
-		        var $img = jQuery(this);
-		        var imgID = $img.attr('id');
-		        var imgClass = $img.attr('class');
-		        var imgURL = $img.attr('src');
-		    
-		        jQuery.get(imgURL, function(data) {
-		            // Get the SVG tag, ignore the rest
-		            var $svg = jQuery(data).find('svg');
-		    
-		            // Add replaced image's ID to the new SVG
-		            if(typeof imgID !== 'undefined') {
-		                $svg = $svg.attr('id', imgID);
-		            }
-		            // Add replaced image's classes to the new SVG
-		            if(typeof imgClass !== 'undefined') {
-		                $svg = $svg.attr('class', imgClass+' replaced-svg');
-		            }
-		    
-		            // Remove any invalid XML tags as per http://validator.w3.org
-		            $svg = $svg.removeAttr('xmlns:a');
-		            
-		            // Check if the viewport is set, else we gonna set it if we can.
-		            if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-		                $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-		            }
-		    
-		            // Replace image with new SVG
-		            $img.replaceWith($svg);
-		    
-		        }, 'xml');
-		    
-		    });
-		});
-
-
-	</script>
-
-	<script type="text/javascript">
-		// Select DOM Items
-		const navbar = document.querySelector('nav');
-		const burgerMenu = document.querySelector('.burger-menu');
-		const leftMenu = document.querySelector('.left-menu');
-
-		// Set Initial State Of Menu
-		let showMenu = false;
-
-		navbar.addEventListener('click', toggleMenu);
-
-		function toggleMenu() {
-		  if (!showMenu) {
-		    burgerMenu.classList.add('menu-open');
-		    navbar.classList.add('menu-open');
-		    leftMenu.classList.add('menu-open');
-		    // menu.classList.add('show');
-		    // menuNav.classList.add('show');
-		    // menuBranding.classList.add('show');
-		    // navItems.forEach(item => item.classList.add('show'));
-
-		    // Set Menu State
-		    showMenu = true;
-		  } else {
-		    burgerMenu.classList.remove('menu-open');
-		    navbar.classList.remove('menu-open');
-		    leftMenu.classList.remove('menu-open');
-		    // menu.classList.remove('show');
-		    // menuNav.classList.remove('show');
-		    // menuBranding.classList.remove('show');
-		    // navItems.forEach(item => item.classList.remove('show'));
-
-		    // Set Menu State
-		    showMenu = false;
-		  }
-			
-		}
-	</script>
 </body>
 </html>

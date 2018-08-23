@@ -1,18 +1,6 @@
 @import "variables.scss";
 
-@font-face{
-	font-family:gotham_blackregular;
-	src:url(../../../assets/fonts/gotham-black-webfont.woff2) format("woff2"), url(../../../assets/fonts/gotham-black-webfont.woff) format("woff");
-	font-weight:400;
-	font-style:normal
-}
 
-@font-face{
-	font-family:gotham_bookregular;
-	src:url(../../../assets/fonts/gotham-book-webfont.woff2) format("woff2"), url(../../../assets/fonts/gotham-book-webfont.woff) format("woff");
-	font-weight:400;
-	font-style:normal
-}
 
 body {
 	background: $primary-color;
@@ -38,7 +26,6 @@ h1, h2 {
 }
 
 h2 {
-	/*font-size: 7vw;*/
 	font-size: 1.5em;
 }
 
@@ -84,15 +71,7 @@ nav {
 
     	.burger-container {
 
-			/*temp start*/
-			    /*width: 55px;*/
-	    /*right: 0px;*/
-	    /*position: absolute;*/
-	    /*temp end*/
-
-
-
-	    	/*flex-basis to take up full witdh and avoid collision with logo*/
+	    	/*flex-basis to take up full width and avoid collision with logo*/
 	    	flex-basis: 100%;
 	    	height: 40px;
 	    	width: 40px;
@@ -113,8 +92,6 @@ nav {
 	    			height: 1px;
 	    			position: absolute;
 					left: 0;
-		    		/*display: block;*/
-		    		/*margin: 0 0 5px 0;*/
 			    	@include easeOut;
 
 					&:nth-child(1) {
@@ -131,7 +108,6 @@ nav {
 		    	}
 
 		    	&.menu-open {
-					/*transform: rotate(90deg);*/
 
 				      div {
 
@@ -149,6 +125,7 @@ nav {
 					      }
 
 				      }
+
 		    	}
 
 	    	}
@@ -158,7 +135,6 @@ nav {
 
     .left-menu {
 	
-		display: -ms-flexbox;
 	    display: flex;
 	    justify-content: center;
 	    align-items: center;
@@ -167,16 +143,10 @@ nav {
 	    top: 0;
 	    right: 0;
 	    bottom: 0;
-	    transition: all .5s linear;
 	    opacity: 0;
 	    overflow: hidden;
 
-
-	    transition: all .5s linear;
-	    transition-property: all;
-	    transition-duration: 0.5s;
-	    transition-timing-function: linear;
-	    transition-delay: 0s;
+		@include leftMenuTransition;
 
 	    &.menu-open {
 	    	width: 100%;
@@ -209,6 +179,7 @@ nav {
 	padding-left: 55px;
 
 	.slide {
+
 		min-height: 100vh;
 		padding: 35px 20px;
 		box-sizing: border-box;
@@ -257,64 +228,58 @@ nav {
 	}
 
 	#digital-transformation-introslide {
-		// background-color: $primary-color;
+
 		color: $bright-color;
 		display: flex;
 		flex-direction: column;
 
-		.slide {
-			/*flex: 1 0 auto;*/ 
-		}
 	}
 
 	#digital-transformation-initiatives {
+
 		background-color: $bright-color;
 		color: $dark-color;
 
 		.initiatives {
 
-			/*background-color: blue;*/
 			display: flex;
 			justify-content: space-between;
 			flex-direction: column;
-			/*flex-wrap: wrap;*/
-			/*align-items: flex-start;*/
 
 			.consulting, .execution {
-				/*flex: 1;*/
+
 				max-width: 100%;
 
 				h3 {
 					margin-bottom: 20px;
 				}
-			}
 
+			}
 		}
 	}
 
 	#digital-transformation-contactform {
+
 		background-color: $accent-color;
 		color: $bright-color;
 
 		.contactform {
+
 			text-align: center;
 			width: 100%;
 			max-width: 500px;
 			margin: auto;
-			/*margin-bottom: 50px;*/
-
-			/*background-color: green;*/
 			
 			#user-data {
 				
 				margin-top: 30px;
 
 				input[type="text"], input[type="email"] {
+
 					border-style: solid;
 					border: 0px;
 					border-bottom: 1px solid $bright-color;
 					background-color: unset;
-					color: #F29892;
 					font-size: 1.1em;
 					padding-bottom: 8px;
 					padding-top: 8px;
@@ -329,6 +294,7 @@ nav {
 					&:focus {
 						outline: none;
 					}
+
 				}
 
 				.input-box {
@@ -339,17 +305,7 @@ nav {
 					width: 100%;
 				}
 
-				/*#phone, #zipcode {
-					float: left;
-				}
-
-				#email, #city {
-					float: right;
-				}*/
-
 			}
-
-			
 
 			button {
 				display: block;
@@ -372,8 +328,6 @@ nav {
 
 		.prize {
 			background-image: url(../../../assets/prize.svg);
-			/*mask: url(../../../assets/prize.svg);*/
-			/*background-color: black;*/
 			background-repeat: no-repeat;
 			display: inline-block;
 			margin: auto;

@@ -5,51 +5,83 @@
 
 @media screen and (min-width: $break-small) {
 
-	#content #digital-transformation-initiatives .initiatives {
-		flex-direction: row;
-	}
-
-	#content #digital-transformation-initiatives .initiatives .consulting, #content #digital-transformation-initiatives .initiatives .execution {
-		width: 35%;
-	}
-
-	#content .slide .slide-content .slide-maintitle {
-		font-size: 3em;
-	}
-
-	#content .slide {
-		padding: 35px 55px;
-	}
-
-	#content #digital-transformation-contactform .contactform #user-data #phone, #content #digital-transformation-contactform .contactform #user-data #zipcode {
-		float: left;
-	}
-	
-	#content #digital-transformation-contactform .contactform #user-data #email, #content #digital-transformation-contactform .contactform #user-data #city {
-		float: right;
-	}
-
 	h2 {
 		/*font-size: 7vw;*/
 		font-size: 2em;
 	}
 
-	#content #digital-transformation-contactform .contactform #user-data {
-	    margin-top: 100px;
-	}
+	#content {
 
-	#content #digital-transformation-contactform .contactform #user-data #phone, #content #digital-transformation-contactform .contactform #user-data #email, #content #digital-transformation-contactform .contactform #user-data #zipcode, #content #digital-transformation-contactform .contactform #user-data #city {
-		width: 48%;
-	}
+		.slide {
 
-	#digital-transformation-contactform {
-		.contactform {
+			padding: 35px 55px;
+
+			.slide-content {
+
+				.slide-subtitle {
+					margin-bottom: 30px;
+				}
+
+				.slide-maintitle {
+					font-size: 3em;
+				}
+
+			}
+
+		}
+
+		#digital-transformation-initiatives {
+
+			.initiatives {
+				flex-direction: row;
+
+				.consulting, .execution {
+					width: 40%;
+				}
+			}
+
+			.slide-content {
+
+				h2 {
+					margin-top: 20px;
+					margin-bottom: 20px;
+				}
+
+			}
+
+		}
+
+		#digital-transformation-contactform {
+
+			.contactform {
+
+				#user-data {
+					margin-top: 100px;
+
+					#phone, #email, #zipcode, #city {
+						width: 48%;
+					}
+
+					#phone, #zipcode {
+						float: left;
+					}
+
+					#email, #city {
+						float: right;
+					}
+				}
+
+			}
+
 			h2 {
 				margin-top: 50px;
 			}
-		}
-	}
 
+		}
+
+		
+		
+	}
 
 }
 

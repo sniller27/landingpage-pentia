@@ -12,6 +12,7 @@ $accent-color: #EB5B51;
 /**
  * BREAK POINTS FOR MEDIA QUERIES
  */
+
 $break-small: 535px;
 $break-medium: 768px;
 
@@ -20,18 +21,43 @@ $break-medium: 768px;
  */
 
 @mixin easeOut {
-  // transition: all 0.5s ease-out;
-  transition: .5s ease-in-out;
-  transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
+	transition: .5s ease-in-out;
+	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
 }
 
 @mixin specialEase {
 	transition: all .5s cubic-bezier(.895,.03,.685,.22);
-    transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
-    transition-delay: 0s;
+	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+	transition-delay: 0s;
+}
+
+@mixin leftMenuTransition {
+	transition: all .5s linear;
+	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
+	transition-delay: 0s;
+}
+
+/**
+ * FONTS
+ */
+
+@font-face{
+	font-family:gotham_blackregular;
+	src:url(../../../assets/fonts/gotham-black-webfont.woff2) format("woff2"), url(../../../assets/fonts/gotham-black-webfont.woff) format("woff");
+	font-weight:400;
+	font-style:normal
+}
+
+@font-face{
+	font-family:gotham_bookregular;
+	src:url(../../../assets/fonts/gotham-book-webfont.woff2) format("woff2"), url(../../../assets/fonts/gotham-book-webfont.woff) format("woff");
+	font-weight:400;
+	font-style:normal
 }

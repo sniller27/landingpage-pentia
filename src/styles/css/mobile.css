@@ -7,6 +7,9 @@
 /**
  * MIXINS
  */
+/**
+ * FONTS
+ */
 @font-face {
   font-family: gotham_blackregular;
   src: url(../../../assets/fonts/gotham-black-webfont.woff2) format("woff2"), url(../../../assets/fonts/gotham-black-webfont.woff) format("woff");
@@ -37,7 +40,6 @@ h1, h2 {
   font-family: gotham_blackregular; }
 
 h2 {
-  /*font-size: 7vw;*/
   font-size: 1.5em; }
 
 a {
@@ -89,12 +91,7 @@ nav {
     bottom: 0;
     width: 55px; }
     nav .button-pane .burger-container {
-      /*temp start*/
-      /*width: 55px;*/
-      /*right: 0px;*/
-      /*position: absolute;*/
-      /*temp end*/
-      /*flex-basis to take up full witdh and avoid collision with logo*/
+      /*flex-basis to take up full width and avoid collision with logo*/
       -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
       height: 40px;
@@ -128,8 +125,6 @@ nav {
           height: 1px;
           position: absolute;
           left: 0;
-          /*display: block;*/
-          /*margin: 0 0 5px 0;*/
           -webkit-transition: .5s ease-in-out;
           transition: .5s ease-in-out;
           -webkit-transition-property: all;
@@ -146,20 +141,18 @@ nav {
             top: 9px; }
           nav .button-pane .burger-container .burger-menu div:nth-child(4) {
             top: 18px; }
-        nav .button-pane .burger-container .burger-menu.menu-open {
-          /*transform: rotate(90deg);*/ }
-          nav .button-pane .burger-container .burger-menu.menu-open div:nth-child(2) {
-            -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg); }
-          nav .button-pane .burger-container .burger-menu.menu-open div:nth-child(3) {
-            -webkit-transform: rotate(45deg);
-            transform: rotate(45deg); }
-          nav .button-pane .burger-container .burger-menu.menu-open div:nth-child(1), nav .button-pane .burger-container .burger-menu.menu-open div:nth-child(4) {
-            width: 0;
-            left: 50%; }
+        nav .button-pane .burger-container .burger-menu.menu-open div:nth-child(2) {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+        nav .button-pane .burger-container .burger-menu.menu-open div:nth-child(3) {
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
+        nav .button-pane .burger-container .burger-menu.menu-open div:nth-child(1), nav .button-pane .burger-container .burger-menu.menu-open div:nth-child(4) {
+          width: 0;
+          left: 50%; }
   nav .left-menu {
-    display: -ms-flexbox;
     display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -172,10 +165,9 @@ nav {
     top: 0;
     right: 0;
     bottom: 0;
-    -webkit-transition: all .5s linear;
-    transition: all .5s linear;
     opacity: 0;
     overflow: hidden;
+    -webkit-transition: all .5s linear;
     transition: all .5s linear;
     -webkit-transition-property: all;
     transition-property: all;
@@ -252,13 +244,10 @@ nav {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
-    #content #digital-transformation-introslide .slide {
-      /*flex: 1 0 auto;*/ }
   #content #digital-transformation-initiatives {
     background-color: #FFFFFF;
     color: #000000; }
     #content #digital-transformation-initiatives .initiatives {
-      /*background-color: blue;*/
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -268,11 +257,8 @@ nav {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
-      flex-direction: column;
-      /*flex-wrap: wrap;*/
-      /*align-items: flex-start;*/ }
+      flex-direction: column; }
       #content #digital-transformation-initiatives .initiatives .consulting, #content #digital-transformation-initiatives .initiatives .execution {
-        /*flex: 1;*/
         max-width: 100%; }
         #content #digital-transformation-initiatives .initiatives .consulting h3, #content #digital-transformation-initiatives .initiatives .execution h3 {
           margin-bottom: 20px; }
@@ -283,24 +269,14 @@ nav {
       text-align: center;
       width: 100%;
       max-width: 500px;
-      margin: auto;
-      /*margin-bottom: 50px;*/
-      /*background-color: green;*/ }
+      margin: auto; }
       #content #digital-transformation-contactform .contactform #user-data {
-        margin-top: 30px;
-        /*#phone, #zipcode {
-					float: left;
-				}
-
-				#email, #city {
-					float: right;
-				}*/ }
+        margin-top: 30px; }
         #content #digital-transformation-contactform .contactform #user-data input[type="text"], #content #digital-transformation-contactform .contactform #user-data input[type="email"] {
           border-style: solid;
           border: 0px;
           border-bottom: 1px solid #FFFFFF;
           background-color: unset;
-          color: #F29892;
           font-size: 1.1em;
           padding-bottom: 8px;
           padding-top: 8px;
@@ -336,8 +312,6 @@ nav {
     margin-top: 50px; }
     #content .prize-box .prize {
       background-image: url(../../../assets/prize.svg);
-      /*mask: url(../../../assets/prize.svg);*/
-      /*background-color: black;*/
       background-repeat: no-repeat;
       display: inline-block;
       margin: auto;

@@ -7,31 +7,51 @@
 /**
  * MIXINS
  */
+/**
+ * FONTS
+ */
+@font-face {
+  font-family: gotham_blackregular;
+  src: url(../../../assets/fonts/gotham-black-webfont.woff2) format("woff2"), url(../../../assets/fonts/gotham-black-webfont.woff) format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: gotham_bookregular;
+  src: url(../../../assets/fonts/gotham-book-webfont.woff2) format("woff2"), url(../../../assets/fonts/gotham-book-webfont.woff) format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
 /*
 	TABLET
  */
 @media screen and (min-width: 535px) {
+  h2 {
+    /*font-size: 7vw;*/
+    font-size: 2em; }
+  #content .slide {
+    padding: 35px 55px; }
+    #content .slide .slide-content .slide-subtitle {
+      margin-bottom: 30px; }
+    #content .slide .slide-content .slide-maintitle {
+      font-size: 3em; }
   #content #digital-transformation-initiatives .initiatives {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row; }
-  #content #digital-transformation-initiatives .initiatives .consulting, #content #digital-transformation-initiatives .initiatives .execution {
-    width: 35%; }
-  #content .slide .slide-content .slide-maintitle {
-    font-size: 3em; }
-  #content .slide {
-    padding: 35px 55px; }
-  #content #digital-transformation-contactform .contactform #user-data #phone, #content #digital-transformation-contactform .contactform #user-data #zipcode {
-    float: left; }
-  #content #digital-transformation-contactform .contactform #user-data #email, #content #digital-transformation-contactform .contactform #user-data #city {
-    float: right; }
-  h2 {
-    /*font-size: 7vw;*/
-    font-size: 2em; }
+    #content #digital-transformation-initiatives .initiatives .consulting, #content #digital-transformation-initiatives .initiatives .execution {
+      width: 40%; }
+  #content #digital-transformation-initiatives .slide-content h2 {
+    margin-top: 20px;
+    margin-bottom: 20px; }
   #content #digital-transformation-contactform .contactform #user-data {
     margin-top: 100px; }
-  #content #digital-transformation-contactform .contactform #user-data #phone, #content #digital-transformation-contactform .contactform #user-data #email, #content #digital-transformation-contactform .contactform #user-data #zipcode, #content #digital-transformation-contactform .contactform #user-data #city {
-    width: 48%; }
-  #digital-transformation-contactform .contactform h2 {
+    #content #digital-transformation-contactform .contactform #user-data #phone, #content #digital-transformation-contactform .contactform #user-data #email, #content #digital-transformation-contactform .contactform #user-data #zipcode, #content #digital-transformation-contactform .contactform #user-data #city {
+      width: 48%; }
+    #content #digital-transformation-contactform .contactform #user-data #phone, #content #digital-transformation-contactform .contactform #user-data #zipcode {
+      float: left; }
+    #content #digital-transformation-contactform .contactform #user-data #email, #content #digital-transformation-contactform .contactform #user-data #city {
+      float: right; }
+  #content #digital-transformation-contactform h2 {
     margin-top: 50px; } }
