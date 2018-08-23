@@ -198,7 +198,7 @@
 				<h2>Få 10 gode råd om digital transformation</h2>
 				<p>Ja tak, jeg vil gerne høre mere digital transformation</p>
 
-				<form action="" id="user-data">
+				<div id="user-data">
 
 					<div class="input-box">
 						<input type="text" id="name" name="name" placeholder="Navn">
@@ -208,8 +208,11 @@
 						<input type="text" id="city" name="city" placeholder="By">
 					</div>
 
-					<button>Ring mig op</button>
-				</form>
+					<button id="submit-form">Ring mig op</button>
+
+					<p id="feedback"></p>
+
+				</div>
 
 				<div class="prize-box">
 					<div class="prize"></div>
@@ -224,6 +227,7 @@
 
 <script src="src/js/svg-conversion.js"></script>
 <script src="src/js/nav.js"></script>
+<script src="src/js/contactform-validation.js"></script>
 
 </body>
 </html>

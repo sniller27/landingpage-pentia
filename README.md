@@ -2,7 +2,7 @@ Link to project: https://sniller27.github.io/landingpage-pentia/digital-transfor
 
 Learning outcome:
 - img src SVG to inline-SVG's conversion
-- css masks
+- CSS masks
 - SASS &'s
 - Flebox
 - Custom burger menu with animation

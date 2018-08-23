@@ -322,6 +322,7 @@ nav {
 					margin-bottom: 5px;
 					margin-top: 5px;
 					width: 240px;
+					color: $bright-color;
 
 					&::placeholder {
 						color: $bright-color;
@@ -339,6 +340,10 @@ nav {
 
 				#name, #phone, #email, #zipcode, #city {
 					width: 100%;
+				}
+
+				#feedback {
+					margin-top: 20px;
 				}
 
 			}

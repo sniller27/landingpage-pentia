@@ -307,7 +307,8 @@ nav {
           padding-top: 8px;
           margin-bottom: 5px;
           margin-top: 5px;
-          width: 240px; }
+          width: 240px;
+          color: #FFFFFF; }
           #content #digital-transformation-contactform .contactform #user-data input[type="text"]::-webkit-input-placeholder, #content #digital-transformation-contactform .contactform #user-data input[type="email"]::-webkit-input-placeholder {
             color: #FFFFFF; }
           #content #digital-transformation-contactform .contactform #user-data input[type="text"]:-ms-input-placeholder, #content #digital-transformation-contactform .contactform #user-data input[type="email"]:-ms-input-placeholder {
@@ -322,6 +323,8 @@ nav {
           overflow: hidden; }
         #content #digital-transformation-contactform .contactform #user-data #name, #content #digital-transformation-contactform .contactform #user-data #phone, #content #digital-transformation-contactform .contactform #user-data #email, #content #digital-transformation-contactform .contactform #user-data #zipcode, #content #digital-transformation-contactform .contactform #user-data #city {
           width: 100%; }
+        #content #digital-transformation-contactform .contactform #user-data #feedback {
+          margin-top: 20px; }
       #content #digital-transformation-contactform .contactform button {
         display: block;
         margin: auto;
